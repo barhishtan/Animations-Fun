@@ -11,6 +11,15 @@ import Spring
 
 class SecondVC: UIViewController {
     
+    // MARK: Available animations enum
+    enum Animations: String {
+        case pop = "'Pop' animation"
+        case swing = "'Swing' animation"
+        case shake = "'Shake' animation"
+    }
+    
+    var currentAnimation: Animations = .pop
+    
     // MARK: - IB Outlets
     @IBOutlet var button: SpringButton!
     @IBOutlet var label: SpringLabel!
@@ -29,9 +38,28 @@ class SecondVC: UIViewController {
         label.clipsToBounds = true
     }
     
-    // MARK: - IB Actions
-    @IBAction func buttonPressed(_ sender: SpringButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        navigationController?.setNavigationBarHidden(false,
+                                                     animated: animated)
     }
     
+    // MARK: - IB Actions
+    @IBAction func buttonPressed() {
+        switch currentAnimation {
+        case .pop:
+            popLabel()
+            currentAnimation = .shake
+        case .shake:
+            shakeLabel()
+            currentAnimation = .swing
+        case .swing:
+            swingLabel()
+            currentAnimation = .pop
+        }
+        
+        button.setTitle("Try \(currentAnimation.rawValue)", for: .normal)
+    }
 }
+

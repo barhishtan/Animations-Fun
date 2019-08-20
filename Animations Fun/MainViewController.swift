@@ -17,24 +17,25 @@ class MainViewController: UIViewController {
     @IBOutlet var topCloud: UIImageView!
     @IBOutlet var bottomCloud: UIImageView!
     
-    // MARK: Private Properties
-    private var topCloudOrigin: CGFloat?
-    private var bottomCloudOrigin: CGFloat?
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        topCloudOrigin = topCloud.frame.origin.x
-        bottomCloudOrigin = bottomCloud.frame.origin.x
-        
+ 
         view.addSkyGradient()
         
         button.layer.borderWidth = 1.5
         button.layer.borderColor = UIColor.black.cgColor
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true,
+                                                     animated: animated)
         animateClouds()
         animateSun()
+        button.animate()
     }
     
 }

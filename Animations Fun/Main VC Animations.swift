@@ -9,6 +9,8 @@
 import UIKit
 
 extension MainViewController {
+    
+    // MARK: - Animations
     func animateClouds() {
         UIImageView.animate(withDuration: 2,
                             delay: 0,
@@ -22,7 +24,7 @@ extension MainViewController {
     func animateSun() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
             
-        pulse.duration = 2
+        pulse.duration = 1.4
         pulse.fromValue = 0.95
         pulse.toValue = 1.05
         pulse.autoreverses = true

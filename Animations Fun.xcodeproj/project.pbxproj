@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E4C00A1E8326A741896D0EF /* Pods_Animations_Fun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0718C38AA420B9400B39F33A /* Pods_Animations_Fun.framework */; };
+		9A773289230C65C4007B7999 /* SecondVC Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A773288230C65C4007B7999 /* SecondVC Animations.swift */; };
 		9A773E3D230C55B70069C56A /* Main VC Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A773E3C230C55B70069C56A /* Main VC Animations.swift */; };
 		9A8C413F230BEAEB0048EBE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C413E230BEAEB0048EBE9 /* AppDelegate.swift */; };
 		9A8C4141230BEAEB0048EBE9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C4140230BEAEB0048EBE9 /* MainViewController.swift */; };
@@ -22,6 +23,7 @@
 		0718C38AA420B9400B39F33A /* Pods_Animations_Fun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animations_Fun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BEE6DB385FCD013F91F919 /* Pods-Animations Fun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animations Fun.debug.xcconfig"; path = "Target Support Files/Pods-Animations Fun/Pods-Animations Fun.debug.xcconfig"; sourceTree = "<group>"; };
 		779B20A33B1E9C18098A31AD /* Pods-Animations Fun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animations Fun.release.xcconfig"; path = "Target Support Files/Pods-Animations Fun/Pods-Animations Fun.release.xcconfig"; sourceTree = "<group>"; };
+		9A773288230C65C4007B7999 /* SecondVC Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondVC Animations.swift"; sourceTree = "<group>"; };
 		9A773E3C230C55B70069C56A /* Main VC Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main VC Animations.swift"; sourceTree = "<group>"; };
 		9A8C413B230BEAEB0048EBE9 /* Animations Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animations Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C413E230BEAEB0048EBE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				9AEB7589230C06D30086FE01 /* UIView+Gradient.swift */,
 				9A773E3C230C55B70069C56A /* Main VC Animations.swift */,
+				9A773288230C65C4007B7999 /* SecondVC Animations.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A773289230C65C4007B7999 /* SecondVC Animations.swift in Sources */,
 				9AEB758A230C06D30086FE01 /* UIView+Gradient.swift in Sources */,
 				9A8C4141230BEAEB0048EBE9 /* MainViewController.swift in Sources */,
 				9AF550F8230C2A9100C3C6AF /* SecondVC.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s0L-Jx-Ros">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloud" translatesAutoresizingMaskIntoConstraints="NO" id="deV-fz-we5">
-                                <rect key="frame" x="223" y="30" width="152" height="61"/>
+                                <rect key="frame" x="223" y="74" width="152" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="XLR-qd-ERD"/>
                                     <constraint firstAttribute="width" constant="152" id="y5V-xQ-KBd"/>
@@ -71,7 +71,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="ako-VE-2hR">
-                                <rect key="frame" x="0.0" y="20" width="177" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="177" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="177" id="Hr0-AT-tFF"/>
                                     <constraint firstAttribute="height" constant="128" id="Xru-El-6JW"/>
@@ -122,6 +122,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="t6J-yt-iLv"/>
                     <connections>
                         <outlet property="bottomCloud" destination="oWv-XD-b7L" id="TWw-Ov-XUm"/>
                         <outlet property="button" destination="DRz-D6-Nmq" id="WOd-Un-gbp"/>
@@ -131,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="25"/>
+            <point key="canvasLocation" x="932" y="24.7376311844078"/>
         </scene>
         <!--SecondVC-->
         <scene sceneID="eVX-hi-OLT">
@@ -149,7 +150,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Go!">
+                                <state key="normal" title="Try It!">
                                     <color key="titleColor" red="1" green="0.0" blue="0.50965378120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -159,16 +160,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="ybI-qM-ygn" eventType="touchUpInside" id="X8J-Hw-UXU"/>
+                                    <action selector="buttonPressed" destination="ybI-qM-ygn" eventType="touchUpInside" id="uzo-2D-lxK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv2-Rc-rEi" customClass="SpringLabel" customModule="Spring">
-                                <rect key="frame" x="40" y="60" width="295" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can animate me.  Do it!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv2-Rc-rEi" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="40" y="104" width="295" height="150"/>
                                 <color key="backgroundColor" red="0.98640948530000006" green="0.80691665410000002" blue="0.25216162199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="u4B-74-bJn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.50965378120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,17 +193,37 @@
                         <viewLayoutGuide key="safeArea" id="xuc-65-R00"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="p5H-89-UrT" id="YGT-iR-Bps"/>
+                        <outlet property="button" destination="p5H-89-UrT" id="iJn-N3-5fK"/>
                         <outlet property="label" destination="Fv2-Rc-rEi" id="TYI-1s-l8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X4-gb-gq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="26"/>
+            <point key="canvasLocation" x="1639.2" y="25.637181409295355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5xV-Pf-O6b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s0L-Jx-Ros" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8f-ID-Vb6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14971551299095154" green="0.56675702333450317" blue="0.81289547681808472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zk3-sh-OVB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ig-w1-Wjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="26"/>
         </scene>
     </scenes>
     <resources>
         <image name="Cloud" width="711" height="445"/>
         <image name="Sun" width="699" height="711"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
