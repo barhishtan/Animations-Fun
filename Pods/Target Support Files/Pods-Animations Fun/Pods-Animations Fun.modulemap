@@ -1,0 +1,6 @@
+framework module Pods_Animations_Fun {
+  umbrella header "Pods-Animations Fun-umbrella.h"
+
+  export *
+  module * { export * }
+}
