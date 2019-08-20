@@ -1,24 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Animations_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-D6-Nmq" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="556.5" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.98640948534011841" green="0.80691665410995483" blue="0.25216162204742432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yfz-LJ-Gtt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Let's get started!">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50965378120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotate">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ybI-qM-ygn" kind="show" id="iiG-A8-JH7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloud" translatesAutoresizingMaskIntoConstraints="NO" id="deV-fz-we5">
+                                <rect key="frame" x="223" y="30" width="152" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="XLR-qd-ERD"/>
+                                    <constraint firstAttribute="width" constant="152" id="y5V-xQ-KBd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="ako-VE-2hR" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="20" width="177" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="Hr0-AT-tFF"/>
+                                    <constraint firstAttribute="height" constant="128" id="Xru-El-6JW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="99"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation Fun Application" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKJ-1l-LfX" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="89" y="188" width="197" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="3tK-S6-lzI"/>
+                                    <constraint firstAttribute="width" secondItem="nKJ-1l-LfX" secondAttribute="height" multiplier="197:180" id="D5P-ns-Mx4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="36"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50965378120814986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloud" translatesAutoresizingMaskIntoConstraints="NO" id="oWv-XD-b7L">
+                                <rect key="frame" x="35" y="405" width="212" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="7aR-IN-LxN"/>
+                                    <constraint firstAttribute="width" constant="212" id="9pN-mZ-CbQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58075571060180664" green="0.81483358144760132" blue="0.94484215974807739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="deV-fz-we5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="7Eg-0p-ZUS"/>
+                            <constraint firstItem="oWv-XD-b7L" firstAttribute="top" secondItem="nKJ-1l-LfX" secondAttribute="bottom" multiplier="1.1" id="Ekc-su-kWp"/>
+                            <constraint firstItem="ako-VE-2hR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EzY-4b-f6O"/>
+                            <constraint firstAttribute="trailing" secondItem="deV-fz-we5" secondAttribute="trailing" id="GtB-R1-SdA"/>
+                            <constraint firstItem="nKJ-1l-LfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OVt-mm-8Yu"/>
+                            <constraint firstItem="DRz-D6-Nmq" firstAttribute="top" secondItem="oWv-XD-b7L" secondAttribute="bottom" multiplier="1.1" id="X6n-mG-g9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DRz-D6-Nmq" secondAttribute="bottom" multiplier="1.1" id="dZd-Ge-uYE"/>
+                            <constraint firstItem="ako-VE-2hR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g0F-aE-Bxa"/>
+                            <constraint firstItem="oWv-XD-b7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="gk7-cQ-AGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DRz-D6-Nmq" secondAttribute="trailing" constant="40" id="p7l-So-lhf"/>
+                            <constraint firstItem="DRz-D6-Nmq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="z3X-2q-1vP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomCloud" destination="oWv-XD-b7L" id="TWw-Ov-XUm"/>
+                        <outlet property="button" destination="DRz-D6-Nmq" id="WOd-Un-gbp"/>
+                        <outlet property="sun" destination="ako-VE-2hR" id="hMh-WT-pYt"/>
+                        <outlet property="topCloud" destination="deV-fz-we5" id="hGn-cf-Y7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-6" y="25"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="eVX-hi-OLT">
+            <objects>
+                <viewController id="ybI-qM-ygn" customClass="SecondVC" customModule="Animations_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bC-hY-gg5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5H-89-UrT" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="556.5" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.98640948530000006" green="0.80691665410000002" blue="0.25216162199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BZF-b4-E8E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50965378120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="ybI-qM-ygn" eventType="touchUpInside" id="X8J-Hw-UXU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv2-Rc-rEi" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="40" y="60" width="295" height="150"/>
+                                <color key="backgroundColor" red="0.98640948530000006" green="0.80691665410000002" blue="0.25216162199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="u4B-74-bJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50965378120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58075571059999997" green="0.81483358139999995" blue="0.94484215969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xuc-65-R00" firstAttribute="trailing" secondItem="p5H-89-UrT" secondAttribute="trailing" constant="40" id="FqL-4w-GvT"/>
+                            <constraint firstItem="p5H-89-UrT" firstAttribute="leading" secondItem="xuc-65-R00" secondAttribute="leading" constant="40" id="czS-ej-6GW"/>
+                            <constraint firstItem="Fv2-Rc-rEi" firstAttribute="top" secondItem="xuc-65-R00" secondAttribute="top" constant="40" id="oXc-u7-fXQ"/>
+                            <constraint firstItem="Fv2-Rc-rEi" firstAttribute="leading" secondItem="xuc-65-R00" secondAttribute="leading" constant="40" id="qLH-F9-jFY"/>
+                            <constraint firstItem="xuc-65-R00" firstAttribute="bottom" secondItem="p5H-89-UrT" secondAttribute="bottom" multiplier="1.1" id="vV1-CI-GlT"/>
+                            <constraint firstItem="xuc-65-R00" firstAttribute="trailing" secondItem="Fv2-Rc-rEi" secondAttribute="trailing" constant="40" id="z6H-HB-I05"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xuc-65-R00"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="p5H-89-UrT" id="YGT-iR-Bps"/>
+                        <outlet property="label" destination="Fv2-Rc-rEi" id="TYI-1s-l8K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7X4-gb-gq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="26"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cloud" width="711" height="445"/>
+        <image name="Sun" width="699" height="711"/>
+    </resources>
 </document>
