@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var button: SpringButton!
-    @IBOutlet var sun: SpringImageView!
+    @IBOutlet var sun: UIImageView!
     @IBOutlet var topCloud: UIImageView!
     @IBOutlet var bottomCloud: UIImageView!
     
@@ -33,19 +33,9 @@ class MainViewController: UIViewController {
         button.layer.borderWidth = 1.5
         button.layer.borderColor = UIColor.black.cgColor
         
-        startCoreAnimation()
+        animateClouds()
+        animateSun()
     }
     
-    // MARK: - Private Methods
-     private func startCoreAnimation() {
-        UIImageView.animate(withDuration: 2,
-                       delay: 0,
-                       options: [.autoreverse, .repeat, .curveEaseInOut],
-                       animations: {
-                        self.topCloud.frame.origin.x -= 7
-                        self.bottomCloud.frame.origin.x += 12
-        })
-    }
-
 }
 
